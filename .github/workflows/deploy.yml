@@ -3,7 +3,7 @@ name: Deploy React by Branch
 on:
   push:
     branches:
-      - 'aula*'
+      - 'aula1'
 
 jobs:
   deploy:
