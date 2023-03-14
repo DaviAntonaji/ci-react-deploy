@@ -29,4 +29,4 @@ jobs:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
           publish_dir: ./build
           publish_branch: main
-          publish_dir_name: "${{ github.ref.replace('refs/heads/', '') }}"
+          publish_dir_name: "aula1"
