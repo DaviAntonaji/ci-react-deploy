@@ -27,6 +27,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./build/*
           publish_branch: main
-          publish_dir_name: "aula1"
+          publish_dir_name: "aula1/"
