@@ -5,9 +5,6 @@ on:
     branches:
       - 'aula1'
 
-env:
-  BRANCH_NAME: "aula1"
-
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -24,11 +21,14 @@ jobs:
         run: npm install
 
       - name: Build React
-        run: PUBLIC_URL=/$BRANCH_NAME npm run build
+        run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           personal_token: ${{ secrets.PERSONAL_TOKEN }}
-          publish_dir: ./build/$BRANCH_NAME
+          publish_dir: ./build
           publish_branch: main
+          publish_dir_name: aula1
+          cname: github.io
+          custom_domain: ${{ github.repository_owner }}.github.io
